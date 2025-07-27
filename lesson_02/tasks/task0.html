@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Задача 0</title>
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<main class="page">
+				<div class="page__container">
+					<section class="page__task task-page task">
+						<article class="task-page__item">
+							<h2 class="task-page__title title">
+								Задача 0.
+							</h2>
+							<p class="task-page__text text">
+								Обчислити значення виразів:
+							</p>
+							<ol class="tasks-page__list list">
+								<li class="tasks-page__item item">
+									S1=a+12+b
+								</li>
+								<li class="tasks-page__item item">
+									S_2=√(((a+b)/2a) )
+								</li>
+								<li class="tasks-page__item item">
+									S_3=∛((a+b)c)
+								</li>
+								<li class="tasks-page__item item">
+									S_4=sin⁡(a/(-b))
+								</li>
+							</ol>
+							<script>
+								// ! 1.Вводимо необхідні данні
+								let a = parseInt(prompt('Введіть перше число: a', '0'));
+								let b = parseInt(prompt('Введіть друге число: b', '0'));
+								let c = parseInt(prompt('Введіть друге число: c', '0'));
+
+								// ! 2.Знаходимо результат
+								let S1 = a + 12 + b;
+								let S_2 = Math.sqrt((a + b) / (2 * a));
+								let S_3 = Math.cbrt((a + b) * c);
+								let S_4 = Math.sin(a / (-b));
+
+								// ! 3.Виводимо результат
+								document.write(`
+								Результат розв\'язання першого виразу, S1 = ${S1}; <br> Результат розв\'язання другого виразу, S_2 = ${S_2}; <br> Результат розв\'язання третього виразу, S_3 = ${S_3}; <br> Результат розв\'язання четвертого виразу, S_4 = ${S_4}.
+								`)
+							</script>
+						</article>
+						<a href="../lesson2.html" class="task-page__link">Повернутись на попередню сторінку</a>
+					</section>
+				</div>
+			</main>
+			<footer class="footer">
+				<div class="footer__copy">
+					Copyright © 2025. e-mail: hiljsv@gmail.com, cote-lapyx.com. All rights reserved.
+				</div>
+			</footer>
+		</div>
+	</body>
+
+</html>
+
+
+
+<!-- Задача 0. Обчислити значення виразів
+	S1=a+12+b
+	S_2=√(((a+b)/2a) )  
+	S_3=∛((a+b)c)  
+	S_4=sin⁡(a/(-b))  -->

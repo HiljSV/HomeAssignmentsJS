@@ -1,0 +1,48 @@
+<!-- Задача 5. -->
+<!-- Задача 3. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Задача 5</title>
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<main class="page">
+				<div class="page__container">
+					<section class="page__task task-page task">
+						<article class="task-page__item">
+							<h2 class="task-page__title title">
+								Задача 5.
+							</h2>
+							<p class="task-page__text text">
+								Дано кількість секунд, що пройшла від початку доби. Визначити скільки це годин і хвилин.
+							</p>
+							<script>
+								// ! 1.Вводимо необхідні данні
+								const seconds = parseInt(prompt('Введіть кількість секунд від початку доби: ', '0'));
+
+								// ! 2.Знаходимо результат
+								const minutes = Math.floor(seconds / 60);
+								const hours = Math.floor(minutes / 60);
+
+								// ! 3.Виводимо результат
+								document.write(`Введено: ${seconds} секунд. <br>
+									 Годин = ${hours} год.
+									 Хвилин = ${minutes} хв. <br>
+									 `)
+							</script>
+						</article>
+						<br>
+						<a href="../lesson2.html" class="task-page__link">Повернутись на попередню сторінку</a>
+					</section>
+				</div>
+			</main>
+		</div>
+	</body>
+
+</html>

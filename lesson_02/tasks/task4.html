@@ -1,0 +1,49 @@
+<!-- Задача 4. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Задача 4</title>
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<main class="page">
+				<div class="page__container">
+					<section class="page__task task-page task">
+						<article class="task-page__item">
+							<h2 class="task-page__title title">
+								Задача 4.
+							</h2>
+							<p class="task-page__text text">
+								Дано довжину у сантиметрах. Визначати скільки це метрів і кілометрів.
+							</p>
+							<script>
+								// ! 1.Вводимо необхідні данні
+								const centimeters = parseFloat(prompt('Введіть довжину у сантиметрах: ', '0'));
+
+
+								// ! 2.Знаходимо результат
+								const meters = centimeters / 100;
+								const kilometers = meters / 1000;
+
+								// ! 3.Виводимо результат
+								document.write(`
+								Введено довжину у сантиметрах: ${centimeters} см, <br><br>
+								результат ${centimeters} см, це ${meters} метрів.<br><br>
+								результат ${centimeters} см, це ${kilometers} кілометрів.
+									`)
+							</script>
+						</article>
+						<br>
+						<a href="../lesson2.html" class="task-page__link">Повернутись на попередню сторінку</a>
+					</section>
+				</div>
+			</main>
+		</div>
+	</body>
+
+</html>

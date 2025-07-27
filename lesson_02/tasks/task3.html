@@ -1,0 +1,50 @@
+<!-- Задача 3. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Задача 3</title>
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<main class="page">
+				<div class="page__container">
+					<section class="page__task task-page task">
+						<article class="task-page__item">
+							<h2 class="task-page__title title">
+								Задача 3.
+							</h2>
+							<p class="task-page__text text">
+								Дано вартість одиниці товару і кількість. Знайти загальну вартість та ПДВ (5% від загальної
+								вартості).
+							</p>
+							<script>
+								// ! 1.Вводимо необхідні данні
+								const costProduct = parseFloat(prompt('Введіть вартість одиниці товару: ', '0'));
+								const productsQuantity = parseFloat(prompt('Введіть кількість товару:', '0'));
+								const VAT_PERCENTAGE = 5;
+
+								// ! 2.Знаходимо результат
+								const totalCostProducts = costProduct * productsQuantity;
+								const VAT_PRICE = totalCostProducts * VAT_PERCENTAGE / 100;
+
+								// ! 3.Виводимо результат
+								document.write(`
+								Загальна вартість товару: ${totalCostProducts}; <br>
+									ПДВ: ${VAT_PRICE}
+									`)
+							</script>
+						</article>
+						<br>
+						<a href="../lesson2.html" class="task-page__link">Повернутись на попередню сторінку</a>
+					</section>
+				</div>
+			</main>
+		</div>
+	</body>
+
+</html>

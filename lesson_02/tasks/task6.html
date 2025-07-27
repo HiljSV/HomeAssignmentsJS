@@ -1,0 +1,98 @@
+<!-- Задача 6.  -->
+<!-- Задача 3. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Задача 6</title>
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<main class="page">
+				<div class="page__container">
+					<section class="page__task task-page task">
+						<article class="task-page__item">
+							<h2 class="task-page__title title">
+								Задача 6.
+							</h2>
+							<p class="task-page__text text">
+								З клавіатури вводяться вартість товару та кількість одиниць 3 товарів. Обчислити вартість
+								кожного товару окремо та загальну вартість. Вивести чек (як у супермаркеті) використовуючи
+								елементи розмітки.
+							</p>
+							<script>
+								// ! 1.Вводимо необхідні данні
+								const costProduct = parseFloat(prompt('Введіть вартість одиниці товару: ', '0'));
+								const productsQuantity = parseFloat(prompt('Введіть кількість товару:', '0'));
+								const costProduct2 = parseFloat(prompt('Введіть вартість одиниці товару: ', '0'));
+								const productsQuantity2 = parseFloat(prompt('Введіть кількість товару:', '0'));
+								const costProduct3 = parseFloat(prompt('Введіть вартість одиниці товару: ', '0'));
+								const productsQuantity3 = parseFloat(prompt('Введіть кількість товару:', '0'));
+								const VAT_PERCENTAGE = 20;
+
+								// ! 2.Знаходимо результат
+
+								const totalCostProduct = costProduct * productsQuantity;
+								const totalCostProduct2 = costProduct2 * productsQuantity2;
+								const totalCostProduct3 = costProduct3 * productsQuantity3;
+								const totalCostProducts = totalCostProduct + totalCostProduct2 + totalCostProduct3;
+								const VAT_PRICE = totalCostProducts * VAT_PERCENTAGE / 100;
+								const VAT_TOTAL_COST_PRODUCTS = VAT_PRICE + totalCostProducts;
+
+
+
+								// ! 3.Виводимо результат
+								document.write(`
+									 <h4> ------------------------------------- </h4>
+								<table border="2px">
+									<caption><h3> Чек </h3></caption>
+									<tr>
+										<td scope="col"> Назва товару </td>
+										<td scope="col"> Кількість (од.) </td>
+										<td scope="col"> Вартість </td>
+									</tr>
+									<tr>
+										<td>Товар 1</td>
+										<td> ${productsQuantity} </td>
+										<td> ${totalCostProduct} </td>
+									</tr>
+									<tr>
+										<td> Товар 2 </td>
+										<td> ${productsQuantity2} </td>
+										<td> ${totalCostProduct2} </td>
+									</tr>
+									<tr>
+										<td>Товар 3</td>
+										<td> ${productsQuantity2} </td>
+										<td> ${totalCostProduct2} </td>
+									</tr>
+									<tr>
+										<td colspan="2"> Загальна вартість товару без ПДВ </td>
+										<td> ${totalCostProducts} </td>
+									</tr>
+									<tr>
+										<td colspan="2"> ПДВ </td>
+										<td> ${VAT_PERCENTAGE} %</td>
+									</tr>
+									<tr>
+										<td colspan="2"> Загальна вартість товару з ПДВ: </td>
+										<td> ${VAT_TOTAL_COST_PRODUCTS.toFixed(2)} </td>
+									</tr>
+								</table>
+								<h4> ------------------------------------- </h4>
+									`)
+							</script>
+						</article>
+						<br>
+						<a href="../lesson2.html" class="task-page__link">Повернутись на попередню сторінку</a>
+					</section>
+				</div>
+			</main>
+		</div>
+	</body>
+
+</html>
