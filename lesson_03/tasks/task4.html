@@ -1,0 +1,63 @@
+<!-- Задача 4. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Задача 4</title>
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<main class="page">
+				<div class="page__container">
+					<section class="page__task task-page task">
+						<article class="task-page__item">
+							<h2 class="task-page__title title">
+								Задача 4.
+							</h2>
+							<p class="task-page__text text">
+								З клавіатури вводиться вік людини. Вивести на екран ким він є (дитиною у садочку, школярем,
+								студентом, працівником, пенсіонером).
+							</p>
+							<script>
+								// ! 1.Вводимо необхідні данні
+								const age = parseInt(prompt('Введіть ваш вік:'));
+								// ! 2.Знаходимо результат.Виводимо результат
+								switch (true) {
+									case (age >= 0 && age <= 6):
+										alert("Ви дитина у садочку.");
+										break;
+
+									case (age >= 7 && age <= 17):
+										alert("Ви школяр.");
+										break;
+
+									case (age >= 18 && age <= 22):
+										alert("Ви студент.");
+										break;
+
+									case (age >= 23 && age <= 65):
+										alert("Ви працівник.");
+										break;
+
+									case (age > 65):
+										alert("Ви пенсіонер.");
+										break;
+
+									default:
+										alert("Некоректний вік.");
+								}
+							</script>
+						</article>
+						<br>
+						<a href="../lesson3.html" class="task-page__link">Повернутись на попередню сторінку</a>
+					</section>
+				</div>
+			</main>
+		</div>
+	</body>
+
+</html>

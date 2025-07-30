@@ -1,0 +1,66 @@
+<!-- Задача 7. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Задача 7</title>
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<main class="page">
+				<div class="page__container">
+					<section class="page__task task-page task">
+						<article class="task-page__item">
+							<h2 class="task-page__title title">
+								Задача 7.
+							</h2>
+							<p class="task-page__text text">
+								З клавіатури вводиться номер місяця. Вивести до якої пори він відноситься
+							</p>
+							<script>
+								// ! 1.Вводимо необхідні данні
+								const month = parseInt(prompt("Введіть номер місяця (1–12):"));
+								// ! 2.Знаходимо результат.Виводимо результат
+								switch (month) {
+									case 12:
+									case 1:
+									case 2:
+										alert("Зима");
+										break;
+
+									case 3:
+									case 4:
+									case 5:
+										alert("Весна");
+										break;
+
+									case 6:
+									case 7:
+									case 8:
+										alert("Літо");
+										break;
+
+									case 9:
+									case 10:
+									case 11:
+										alert("Осінь");
+										break;
+
+									default:
+										alert("Невірний номер місяця. Введіть число від 1 до 12.");
+								}
+							</script>
+						</article>
+						<br>
+						<a href="../lesson3.html" class="task-page__link">Повернутись на попередню сторінку</a>
+					</section>
+				</div>
+			</main>
+		</div>
+	</body>
+
+</html>

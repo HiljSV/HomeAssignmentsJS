@@ -1,0 +1,49 @@
+<!-- Задача 1.  -->
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Задача 1</title>
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<main class="page">
+				<div class="page__container">
+					<section class="page__task task-page task">
+						<article class="task-page__item">
+							<h2 class="task-page__title title">
+								Задача 1.
+							</h2>
+							<p class="task-page__text text">
+								З клавіатури вводяться імена двох дітей та кількість у них цукерок. Вивести не екран ім’я тієї
+								дитини, у якої кількість цукерок є більшою, або вивести, що кількість однакова.
+							</p>
+							<script>
+								// ! 1.Вводимо необхідні данні
+								const childFirstName = prompt('Введіть ім\'я першої дитини:');
+								const quantityCandyFirstChild = parseInt(prompt(` Кількість цукерок у ${childFirstName} ?`));
+								const childSecondName = prompt('Введіть ім\'я другої дитини:');
+								const quantityCandySecondChild = parseInt(prompt(` Кількість цукерок у ${childSecondName} ?`));
+
+								// ! 2. Обчислення
+								if (quantityCandyFirstChild < quantityCandySecondChild) {
+									alert(`${childSecondName}`)
+								} else if (quantityCandyFirstChild > quantityCandySecondChild) {
+									alert(`${childFirstName}`)
+								} else {
+									alert('Кількість цукерок однакова!')
+								}
+							</script>
+						</article>
+						<br>
+						<a href="../lesson3.html" class="task-page__link">Повернутись на попередню сторінку</a>
+					</section>
+				</div>
+			</main>
+		</div>
+	</body>
+
+</html>

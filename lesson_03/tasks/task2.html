@@ -1,0 +1,50 @@
+<!-- Задача 2. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Задача 2</title>
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<main class="page">
+				<div class="page__container">
+					<section class="page__task task-page task">
+						<article class="task-page__item">
+							<h2 class="task-page__title title">
+								Задача 2.
+							</h2>
+							<p class="task-page__text text">
+								З клавіатури вводиться ціна товару і кількість грошей. Якщо грошей не вистачає то відмовляємо у
+								покупці, інакше, якщо ще залишаються гроші, то пропонуємо купити лотерею за 4 грн.
+							</p>
+							<script>
+								// ! 1.Вводимо необхідні данні
+								const priceProduct = parseFloat(prompt('Введіть ціну товару: ', '0').replace(',', '.'));
+								let amountOfMoney = parseFloat(prompt('Введіть кількість грошей: ', '0').replace(',', '.'));
+								const lotteryTicketPrice = 4;
+								const lotteryPlusProduct = priceProduct + lotteryTicketPrice;
+
+								// ! 2. Обчислення
+								if (amountOfMoney >= lotteryPlusProduct) {
+									alert(`Пропонуємо додати до покупки лотерею за ${lotteryTicketPrice} грн.`)
+								} else if (priceProduct === amountOfMoney) {
+									alert(`Вітаємо з покупкою!`)
+								} else {
+									alert(`Грошей не вистачає у покупці відмовлено!`)
+								}
+							</script>
+						</article>
+						<br>
+						<a href="../lesson3.html" class="task-page__link">Повернутись на попередню сторінку</a>
+					</section>
+				</div>
+			</main>
+		</div>
+	</body>
+
+</html>
