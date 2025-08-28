@@ -1,0 +1,46 @@
+<!-- Задача 1.  -->
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Задача 2</title>
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<main class="page">
+				<div class="page__container">
+					<section class="page__task task-page task">
+						<article class="task-page__item">
+							<h2 class="task-page__title title">
+								Задача 2.
+							</h2>
+							<p class="task-page__text text">
+								Створити 10 елементів для введення цін продуктів
+							</p>
+							<img class="task-page__img img" src="/img/les5/task2.png" alt="image">
+							<br>
+							<br>
+							<script>
+								document.write(`<h3> РІШЕННЯ: </h3> <br>`);
+								// ! 1.Вводимо необхідні данні
+
+								let firstProductNum = 10;
+
+								// ! 2.Знаходимо і Виводимо результат
+								for (let i = 1; i <= firstProductNum; i++) {
+									document.write(`Product # ${i} <input type="number" style="margin: 5px;"><br>`);
+								}
+							</script>
+						</article>
+						<br>
+						<a href="../lesson5.html" class="task-page__link">Повернутись на попередню сторінку</a>
+					</section>
+				</div>
+			</main>
+		</div>
+	</body>
+
+</html>

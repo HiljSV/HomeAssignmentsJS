@@ -1,0 +1,45 @@
+<!-- Задача 1.  -->
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Задача 0</title>
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<main class="page">
+				<div class="page__container">
+					<section class="page__task task-page task">
+						<article class="task-page__item">
+							<h2 class="task-page__title title">
+								Задача 0.
+							</h2>
+							<p class="task-page__text text">
+								Вивести на екран 8 кнопок з написом “Hello”.
+							</p>
+							<script>
+								document.write(`<h3> РІШЕННЯ: </h3> <br>`);
+								// ! 1.Вводимо необхідні данні
+								const columnsNumbers = parseInt(prompt(`Введіть кількість кнопок, або залиште введене значення`, '8'));
+								// ! 2.Знаходимо і Виводимо результат
+								if (!isNaN(columnsNumbers) && columnsNumbers > 0) {
+									for (let i = 0; i < columnsNumbers; i++) {
+										document.write(`${i + 1} &nbsp; <button style="padding:${20}px; margin-bottom:${30}px; margin-left:${30}px; background-color:yellow; border-radius:${10}px;" >"Hello"</button>` + "<br>");
+									}
+								} else {
+									document.write(`Введено некоректні данні`);
+								}
+							</script>
+						</article>
+						<br>
+						<a href="../lesson5.html" class="task-page__link">Повернутись на попередню сторінку</a>
+					</section>
+				</div>
+			</main>
+		</div>
+	</body>
+
+</html>

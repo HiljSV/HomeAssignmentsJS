@@ -1,0 +1,49 @@
+<!-- Задача 1.  -->
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Задача 17 (-2)</title>
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<main class="page">
+				<div class="page__container">
+					<section class="page__task task-page task">
+						<article class="task-page__item">
+							<h2 class="task-page__title title">
+								Задача 17 (-2).
+							</h2>
+							<p class="task-page__text text">
+								Поступово генерувати 100 випадкових чисел від 1 до 1000. Підрахувати яких чисел більше: парних
+								чи непарних.
+							</p>
+							<br>
+							<script>
+								document.write(`<h3> РІШЕННЯ: </h3> <br>`);
+								// ! 1.Вводимо необхідні данні
+								//let oddNum = 0; // непарні числа
+								let evenNum = 0; // парні числа
+								// ! 2.Знаходимо і Виводимо результат
+								for (let i = 0; i < 100; i++) {
+									const randomNum = 1 + Math.floor(Math.random() * 1000)
+									if (randomNum % 2 === 0) {
+										evenNum++
+									}
+								}
+								const oddNum = 100 - evenNum; // непарні числа
+								document.write(`Even: ${evenNum}, Odd: ${oddNum}`);
+							</script>
+						</article>
+						<br>
+						<a href="../lesson5.html" class="task-page__link">Повернутись на попередню сторінку</a>
+					</section>
+				</div>
+			</main>
+		</div>
+	</body>
+
+</html>

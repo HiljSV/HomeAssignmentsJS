@@ -1,0 +1,49 @@
+<!-- Задача 1.  -->
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Задача 4</title>
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<main class="page">
+				<div class="page__container">
+					<section class="page__task task-page task">
+						<article class="task-page__item">
+							<h2 class="task-page__title title">
+								Задача 4.
+							</h2>
+							<p class="task-page__text text">
+								Вивести таблицю з 3 рядків і 7 стовпців
+							</p>
+							<img class="task-page__img img" src="/img/les5/task4.png" alt="image">
+							<script>
+								document.write(`<h3> РІШЕННЯ: </h3> <br>`);
+								// ! 1.Вводимо необхідні данні
+								const columnsNumbers = parseInt(prompt(`Введіть кількість стовпців, або залиште введене значення`, '7'));
+								const rowsNumbers = parseInt(prompt(`Введіть кількість рядків, або залиште введене значення`, '3'));
+								// ! 2.Знаходимо і Виводимо результат
+								document.write(`<table border="2px">`)
+								for (let row = 1; row <= rowsNumbers; row++) {
+									document.write(`<tr>`)
+									for (let column = 1; column <= columnsNumbers; column++) {
+										document.write(`<td>${column}</td>`)
+									}
+									document.write(`</tr>`)
+								}
+								document.write(`</table>`)
+							</script>
+						</article>
+						<br>
+						<a href="../lesson5.html" class="task-page__link">Повернутись на попередню сторінку</a>
+					</section>
+				</div>
+			</main>
+		</div>
+	</body>
+
+</html>
