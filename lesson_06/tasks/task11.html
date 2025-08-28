@@ -1,0 +1,49 @@
+<!-- Задача 1.  -->
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Задача 11</title>
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<main class="page">
+				<div class="page__container">
+					<section class="page__task task-page task">
+						<article class="task-page__item">
+							<h2 class="task-page__title title">
+								Задача 11.
+							</h2>
+							<p class="task-page__text text">
+								Комп’ютер загадує випадкове число від 1 до 10. Вгадати число шляхом введеня можливих варіантів.
+								В кінці вивести кількість спроб користувача.
+							</p>
+							<script>
+								document.write(`<h3> РІШЕННЯ: </h3> <br>`);
+								// ! 1.Вводимо необхідні данні
+
+								let secretNum = Math.floor(Math.random() * 10) + 1;
+								let numberOfAttempts = 0;
+								let numGuess;
+								// ! 2.Знаходимо результат.Виводимо результат
+								do {
+									numGuess = parseInt(prompt("Вгадайте число від 1 до 10:", ''));
+									numberOfAttempts++;
+								} while (numGuess !== secretNum);
+								// ! 3.Виводимо результат
+								document.write(`Ви вгадали число ${secretNum}!<br>`);
+								document.write(`Кількість спроб: ${numberOfAttempts}`);
+							</script>
+						</article>
+						<br>
+						<a href="../lesson6.html" class="task-page__link">Повернутись на попередню сторінку</a>
+					</section>
+				</div>
+			</main>
+		</div>
+	</body>
+
+</html>

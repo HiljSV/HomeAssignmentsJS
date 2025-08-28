@@ -1,0 +1,49 @@
+<!-- Задача 5. -->
+<!-- Задача 3. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Задача 5</title>
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<main class="page">
+				<div class="page__container">
+					<section class="page__task task-page task">
+						<article class="task-page__item">
+							<h2 class="task-page__title title">
+								Задача 5.
+							</h2>
+							<p class="task-page__text text">
+								Інвестор вклав тис. грн на 20 років під 20% річних. Визначити за допомогою циклів суму, яку він
+								одержить (без оподаткування).
+							</p>
+							<script>
+								document.write(`<h3> РІШЕННЯ: </h3> <br>`);
+								// ! 1.Вводимо необхідні данні
+								const percentForAmount = 20;
+								const yearsAmount = 20;
+								let depositAmount = parseFloat(prompt(`Введіть суму депозиту (грн.) на 20 років під 20% річних.`, ''));
+								// ! 2.Знаходимо результат.Виводимо результат
+
+								for (let i = 1; i <= yearsAmount; i++) {
+									depositAmount += depositAmount * (percentForAmount / 100); // додаємо річні відсотки
+								}
+
+								document.write(`Сума депозиту через ${yearsAmount} років: ${depositAmount.toFixed(2)} тис. грн`);
+							</script>
+						</article>
+						<br>
+						<a href="../lesson6.html" class="task-page__link">Повернутись на попередню сторінку</a>
+					</section>
+				</div>
+			</main>
+		</div>
+	</body>
+
+</html>

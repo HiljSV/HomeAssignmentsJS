@@ -1,0 +1,46 @@
+<!-- Задача 7. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Задача 8</title>
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<main class="page">
+				<div class="page__container">
+					<section class="page__task task-page task">
+						<article class="task-page__item">
+							<h2 class="task-page__title title">
+								Задача 8.
+							</h2>
+							<p class="task-page__text text">
+								З клавіатури вводиться число. Знаходити суму цифр до тих пір. Поки сума не стане більшую за 20.
+							</p>
+							<script>
+								document.write(`<h3> РІШЕННЯ: </h3> <br>`);
+								// ! 1.Вводимо необхідні данні
+								let sum = 0;
+
+								// ! 2.Знаходимо результат.Виводимо результат
+								while (sum <= 20) {
+									const num = parseInt(prompt("Введіть число:", ''));
+									sum += num;
+									document.write(`Поточна сума: ${sum}<br>`);
+								}
+								document.write(`Сума перевищила 20: ${sum}`);
+							</script>
+						</article>
+						<br>
+						<a href="../lesson6.html" class="task-page__link">Повернутись на попередню сторінку</a>
+					</section>
+				</div>
+			</main>
+		</div>
+	</body>
+
+</html>
