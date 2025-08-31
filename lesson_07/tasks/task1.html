@@ -1,0 +1,98 @@
+<!-- Задача 2. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Задача 2</title>
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<main class="page">
+				<div class="page__container">
+					<section class="page__task task-page task">
+						<article class="task-page__item">
+							<h2 class="task-page__title title">
+								Задача 2.
+							</h2>
+							<p class="task-page__text text">
+								Створити функцію, яка за номером місяця повертає його назву.
+							</p>
+							<script>
+								document.write(`<h3> РІШЕННЯ: </h3> <br>`);
+
+								function getMonthName(month) {
+									let name;
+
+									switch (month) {
+										case 1:
+											name =
+												"Січень";
+											break;
+										case 2:
+											name =
+												"Лютий";
+											break;
+										case 3:
+											name =
+												"Березень";
+											break;
+										case 4:
+											name =
+												"Квітень";
+											break;
+										case 5:
+											name =
+												"Травень";
+											break;
+										case 6:
+											name =
+												"Червень";
+											break;
+										case 7:
+											name =
+												"Липень";
+											break;
+										case 8:
+											name =
+												"Серпень";
+											break;
+										case 9:
+											name =
+												"Вересень";
+											break;
+										case 10:
+											name =
+												"Жовтень";
+											break;
+										case 11:
+											name =
+												"Листопад";
+											break;
+										case 12:
+											name =
+												"Грудень";
+											break;
+										default:
+											name =
+												"Неправильний номер місяця";
+											break;
+									}
+									return name;
+								}
+								let month = parseInt(prompt("Введіть номер місяця (1-12):", "9"));
+								document.write("Місяць №" + month + " → " + getMonthName(month));
+							</script>
+						</article>
+						<br>
+						<a href="../lesson7.html" class="task-page__link">Повернутись на попередню сторінку</a>
+					</section>
+				</div>
+			</main>
+		</div>
+	</body>
+
+</html>

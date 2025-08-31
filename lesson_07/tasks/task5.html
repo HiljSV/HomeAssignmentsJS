@@ -1,0 +1,75 @@
+<!-- Задача 4. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Задача 5</title>
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<main class="page">
+				<div class="page__container">
+					<section class="page__task task-page task">
+						<article class="task-page__item">
+							<h2 class="task-page__title title">
+								Задача 5.
+							</h2>
+							<p class="tasks-page__text text">
+								Створити окремі функції, які переводять:
+							</p>
+							<ol class="tasks-page__list list">
+								<li class="tasks-page__item item">
+									Сантиметри у дюйми;
+								</li>
+								<li class="tasks-page__item item">
+									Кілограми у фунти;
+								</li>
+								<li class="tasks-page__item item">
+									Кілометри у милі.
+								</li>
+							</ol>
+							<script>
+								// Сантиметр (cm): — 1 inch (in.) = 2.54 см.
+								// Кілограм (kg): — 1 pound (lb) ≈ 0.45 кг.
+								// Кілометр (km): — 1 mile (mi) ≈ 1.609 км.
+
+								document.write(`<h3> РІШЕННЯ: </h3> <br>`);
+
+								function getInches(cm) {
+									return cm / 2.54;
+								}
+
+								function getPounds(kg) {
+									return kg * 2.20462;
+								}
+
+								function getMiles(km) {
+									return km * 0.621371;
+								}
+
+								let cm = parseFloat(prompt("Введіть число в сантиметрах щоб перевести у дюйми", "10"));
+
+								let kg = parseFloat(prompt("Введіть число в кілограмах щоб перевести у фунти", "100"));
+
+								let km = parseFloat(prompt("Введіть число в кілометрах щоб перевести у милі", "1000"));
+
+								document.write(cm + " см = " + getInches(cm).toFixed(2) + " in; <br>");
+
+								document.write(kg + " кг = " + getPounds(kg).toFixed(2) + " lb; <br>");
+
+								document.write(km + " км = " + getMiles(km).toFixed(2) + " ml. <br>");
+							</script>
+						</article>
+						<br>
+						<a href="../lesson7.html" class="task-page__link">Повернутись на попередню сторінку</a>
+					</section>
+				</div>
+			</main>
+		</div>
+	</body>
+
+</html>

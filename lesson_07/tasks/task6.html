@@ -1,0 +1,57 @@
+<!-- Задача 4. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Задача 6</title>
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<main class="page">
+				<div class="page__container">
+					<section class="page__task task-page task">
+						<article class="task-page__item">
+							<h2 class="task-page__title title">
+								Задача 6.
+							</h2>
+							<p class="tasks-page__text text">
+								Створити функцію, яка створює таблицю з вказаною кількістю рядків і стовпців (таблиця
+								заповнюється заданим фіксованим повідомленням).
+							</p>
+							<script>
+								document.write(`<h3> РІШЕННЯ: </h3> <br>`);
+
+								function tableCreate(rowsNum, colsNum, messages) {
+									let tableForHtml = '<table border="2" cellspacing="5" cellpadding="25">\n';
+
+									for (let i = 0; i < rowsNum; i++) {
+										tableForHtml += ' <tr>\n';
+										for (let j = 0; j < colsNum; j++) {
+											tableForHtml += ` <td>${messages}</td>\n`;
+										}
+										tableForHtml += ' </tr>\n';
+									}
+									tableForHtml += '</table>';
+									return tableForHtml
+								}
+
+								const rowsNum = parseInt(prompt("Введіть кількість рядків таблиці", "5"));
+								const colsNum = parseInt(prompt("Введіть кількість колонок таблиці", "5"));
+								const messages = prompt("Введіть повідомлення", "messages");
+
+								document.write(tableCreate(rowsNum, colsNum, messages));
+							</script>
+						</article>
+						<br>
+						<a href="../lesson7.html" class="task-page__link">Повернутись на попередню сторінку</a>
+					</section>
+				</div>
+			</main>
+		</div>
+	</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!-- Задача 4. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Задача 4</title>
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<main class="page">
+				<div class="page__container">
+					<section class="page__task task-page task">
+						<article class="task-page__item">
+							<h2 class="task-page__title title">
+								Задача 4.
+							</h2>
+							<p class="tasks-page__text text">
+								Створити окремі функції, які для 4 чисел знаходять:
+							</p>
+							<ol class="tasks-page__list list">
+								<li class="tasks-page__item item">
+									суму;
+								</li>
+								<li class="tasks-page__item item">
+									добуток;
+								</li>
+								<li class="tasks-page__item item">
+									середнє арифметичне;
+								</li>
+								<li class="tasks-page__item item">
+									мінімальне значення.
+								</li>
+							</ol>
+							<script>
+								document.write(`<h3> РІШЕННЯ: </h3> <br>`);
+
+								function getSum(a, b, c, d) {
+									return a + b + c + d;
+								}
+
+								function getMultiplication(a, b, c, d) {
+									return a * b * c * d;
+								}
+
+								function getAverage(a, b, c, d) {
+
+									return (a + b + c + d) / 4;
+								}
+
+								function getMin(a, b, c, d) {
+									return Math.min(a, b, c, d);
+								}
+
+								const a = parseInt(prompt("Введіть перше число", "4"));
+								const b = parseInt(prompt("Введіть друге число", "8"));
+								const c = parseInt(prompt("Введіть третє число", "16"));
+								const d = parseInt(prompt("Введіть четверте число", "32"));
+
+								document.write(` Перше число = ${a}, Друге число = ${b}, Третє число = ${c}, Четверте число = ${d}. <br>`);
+								document.write(" 1. Сума = " + getSum(a, b, c, d) + "; <br>");
+								document.write(" 2. Добуток = " + getMultiplication(a, b, c, d) + "; <br>");
+								document.write(" 3. Середнє арифметичне = " + getAverage(a, b, c, d) + "; <br>");
+								document.write(" 4. Мінімальне значення = " + getMin(a, b, c, d) + "; <br>");
+							</script>
+						</article>
+						<br>
+						<a href="../lesson7.html" class="task-page__link">Повернутись на попередню сторінку</a>
+					</section>
+				</div>
+			</main>
+		</div>
+	</body>
+
+</html>

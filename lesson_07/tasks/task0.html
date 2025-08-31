@@ -1,0 +1,52 @@
+<!-- Задача 1.  -->
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Задача 1</title>
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<main class="page">
+				<div class="page__container">
+					<section class="page__task task-page task">
+						<article class="task-page__item">
+							<h2 class="task-page__title title">
+								Задача 0.
+							</h2>
+							<p class="task-page__text text">
+								Створити функцію, яка за номером місяця повертає пору року, до якої відноситься цей місяць.
+							</p>
+							<script>
+								document.write(`<h3> РІШЕННЯ: </h3> <br>`);
+
+								function getSeason(month) {
+									if (month === 12 || month === 1 || month === 2) {
+										return "Зима";
+									} else if (month >= 3 && month <= 5) {
+										return "Весна";
+									} else if (month >= 6 && month <= 8) {
+										return "Літо";
+									} else if (month >= 9 && month <= 11) {
+										return "Осінь";
+									} else {
+										return "Неправильний номер місяця";
+									}
+								}
+								let month = parseInt(prompt("Введіть номер місяця (1-12):", "5"));
+								let season = getSeason(month);
+								document.write("Місяць №" + month + " → " + season);
+							</script>
+						</article>
+						<br>
+						<a href="../lesson7.html" class="task-page__link">Повернутись на попередню сторінку</a>
+					</section>
+				</div>
+			</main>
+		</div>
+	</body>
+
+</html>
