@@ -1,0 +1,101 @@
+<!-- Задача 5. -->
+<!-- Задача 3. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Задача 5</title>
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<main class="page">
+				<div class="page__container">
+					<section class="page__task task-page task">
+						<article class="task-page__item">
+							<h2 class="task-page__title title">
+								Задача 1.
+							</h2>
+							<p class="task-page__text text">
+								Дано масив, який містить оцінки з К предметів. Знайти середній бал і з'ясувати до якої категорії
+								він відноситься (відмінник, двієчник (має хоча би одну двійку), хорошист (оцінки добре і
+								відмінно), трієчник(є хоча би одна трійка)).
+							</p>
+							<script>
+								document.write(`<h3> РІШЕННЯ: </h3> <br>`);
+								// Функція для перевірки, чи є у масиві певне значення (аналог includes)
+								function myIncludes(arr, value) {
+									for (let i = 0; i < arr.length; i++) {
+										if (arr[i] === value) return true;
+									}
+									return false;
+								}
+
+								// Функція для перевірки, чи всі елементи масиву задовольняють умову (аналог every)
+								function myEvery(arr, callback) {
+									for (let i = 0; i < arr.length; i++) {
+										if (!callback(arr[i])) return false;
+									}
+									return true;
+								}
+
+								// Функція для обчислення середнього бала
+								function getAverage(arr) {
+									let sum = 0;
+									for (let i = 0; i < arr.length; i++) {
+										sum += arr[i];
+									}
+									return sum / arr.length;
+								}
+
+								// Функція для визначення категорії учня
+								function getCategory(arr) {
+									let category = "";
+
+									if (myIncludes(arr, 2)) {
+										category = "Двієчник (є хоча би одна 2)";
+									} else if (myIncludes(arr, 3)) {
+										category = "Трієчник (є хоча би одна 3)";
+									} else if (myEvery(arr, eval => eval >= 4 && eval <= 5)) {
+										category = "Хорошист (усі оцінки 4 або 5)";
+									} else if (myEvery(arr, eval => eval === 5)) {
+										category = "Відмінник (усі 5)";
+									} else {
+										category = "Невизначена категорія";
+									}
+
+									return category;
+								}
+
+								// Тестові масиви оцінок
+								let studentEvaluationsList = [
+									[5, 4, 5, 4, 5, 4, 4, 4, 4, 5], // Хорошист
+									[5, 5, 5, 5, 5, 5, 5], // Відмінник
+									[5, 4, 5, 2, 3, 3, 3, 3, 5, 2, 3], // Двієчник
+									[5, 4, 3, 4, 5, 4, 4, 4, 4, 4, 3] // Трієчник
+								];
+
+								// Вивід результатів
+								for (let i = 0; i < studentEvaluationsList.length; i++) {
+									let arr = studentEvaluationsList[i];
+									let avg = getAverage(arr); // Окремо обчислюємо середній бал
+									let category = getCategory(arr); // Окремо визначаємо категорію
+
+									document.write("Оцінки: " + arr.join(", ") + "<br>");
+									document.write("Середній бал: " + avg.toFixed(2) + "<br>");
+									document.write("Категорія: " + category + "<hr>");
+								}
+							</script>
+						</article>
+						<br>
+						<a href="../lesson8.html" class="task-page__link">Повернутись на попередню сторінку</a>
+					</section>
+				</div>
+			</main>
+		</div>
+	</body>
+
+</html>

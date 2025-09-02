@@ -1,0 +1,79 @@
+<!-- Задача 7. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Задача 5</title>
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<main class="page">
+				<div class="page__container">
+					<section class="page__task task-page task">
+						<article class="task-page__item">
+							<h2 class="task-page__title title">
+								Задача 5.
+							</h2>
+							<p class="tasks-page__text text">
+								Задача 5. Дано послідовність оцінок учня. Підрахувати кількість:
+							</p>
+							<ol class="tasks-page__list list">
+								<li class="tasks-page__item item">
+									двійок;
+								</li>
+								<li class="tasks-page__item item">
+									кількість хороших оцінок (добре, відмінно);
+								</li>
+								<li class="tasks-page__item item">
+									кількість оцінок, які нижче середнього.
+								</li>
+							</ol>
+							<script>
+								document.write(`<h3> РІШЕННЯ: </h3> <br>`);
+								// Масив оцінок учня
+								const grades = [5, 4, 3, 2, 5, 4, 3];
+
+								// Лічильники
+								let countTwos = 0;
+								let countGood = 0;
+
+								// 1. Обчислюємо суму для середнього
+								let sum = 0;
+								for (let i = 0; i < grades.length; i++) {
+									sum += grades[i];
+
+									// Лічимо двійки
+									if (grades[i] === 2) countTwos++;
+
+									// Лічимо хороші оцінки (4 та 5)
+									if (grades[i] === 4 || grades[i] === 5) countGood++;
+								}
+
+								// 2. Середній бал
+								const average = sum / grades.length;
+
+								// 3. Оцінки нижче середнього
+								let countBelowAverage = 0;
+								for (let i = 0; i < grades.length; i++) {
+									if (grades[i] < average) countBelowAverage++;
+								}
+
+								// Вивід результатів
+								document.write(`Кількість двійок: ${countTwos} <br>`);
+								document.write(`Кількість хороших оцінок (4 та 5): ${countGood} <br>`);
+								document.write(`Кількість оцінок нижче середнього (${average.toFixed(2)}): ${countBelowAverage} <br>`);
+							</script>
+						</article>
+						<br>
+						<a href="../lesson8.html" class="task-page__link">Повернутись на попередню сторінку</a>
+					</section>
+				</div>
+			</main>
+		</div>
+	</body>
+
+</html>

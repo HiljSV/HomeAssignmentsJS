@@ -1,0 +1,109 @@
+<!-- Задача 1.  -->
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Задача 7</title>
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<main class="page">
+				<div class="page__container">
+					<section class="page__task task-page task">
+						<article class="task-page__item">
+							<h2 class="task-page__title title">
+								Задача 7.
+							</h2>
+							<p class="tasks-page__text text">
+								Дано послідовність платіжок протягом року. Знайти сумарну кількість грошей за:
+							</p>
+							<ol class="tasks-page__list list">
+								<li class="tasks-page__item item">
+									за весь рік;
+								</li>
+								<li class="tasks-page__item item">
+									у першій половині року;
+								</li>
+								<li class="tasks-page__item item">
+									у другій половині року;
+								</li>
+								<li class="tasks-page__item item">
+									за літо;
+								</li>
+								<li class="tasks-page__item item">
+									за ІІ квартал;
+								</li>
+								<li class="tasks-page__item item">
+									за парні місяці (з парними номерами);
+								</li>
+								<li class="tasks-page__item item">
+									за місяці, які є початковими у сезоні (весна, літо, осінь, зима).
+								</li>
+							</ol>
+							<script>
+								document.write(`<h3> РІШЕННЯ: </h3> <br>`);
+
+								let totalYear = 0;
+								let firstHalf = 0;
+								let secondHalf = 0;
+								let summer = 0;
+								let q2 = 0;
+								let evenMonths = 0;
+								let seasonStart = 0;
+
+								for (let month = 1; month <= 12; month++) {
+									// випадкова "платіжка" від 500 до 2000
+									const payment = Math.floor(Math.random() * (2000 - 500 + 1)) + 500;
+									document.write(`Місяць ${month}: ${payment}<br>`);
+
+									totalYear += payment;
+
+									if (month <= 6) {
+										firstHalf += payment;
+									} else {
+										secondHalf += payment;
+									}
+
+									// літо: 6,7,8
+									if (month === 6 || month === 7 || month === 8) {
+										summer += payment;
+									}
+
+									// ІІ квартал: 4,5,6
+									if (month === 4 || month === 5 || month === 6) {
+										q2 += payment;
+									}
+
+									// парні місяці
+									if (month % 2 === 0) {
+										evenMonths += payment;
+									}
+
+									// початок сезонів: 3,6,9,12
+									if (month === 3 || month === 6 || month === 9 || month === 12) {
+										seasonStart += payment;
+									}
+								}
+
+								document.write("<hr>");
+								document.write("Сума за рік: " + totalYear + "<br>");
+								document.write("Перша половина року: " + firstHalf + "<br>");
+								document.write("Друга половина року: " + secondHalf + "<br>");
+								document.write("Літо: " + summer + "<br>");
+								document.write("II квартал: " + q2 + "<br>");
+								document.write("Парні місяці: " + evenMonths + "<br>");
+								document.write("Початок сезонів: " + seasonStart + "<br>");
+							</script>
+						</article>
+						<br>
+						<a href="../lesson8.html" class="task-page__link">Повернутись на попередню сторінку</a>
+					</section>
+				</div>
+			</main>
+		</div>
+	</body>
+
+</html>

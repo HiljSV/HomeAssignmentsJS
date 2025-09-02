@@ -1,0 +1,51 @@
+<!-- Задача 5. -->
+<!-- Задача 3. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Задача 3</title>
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<main class="page">
+				<div class="page__container">
+					<section class="page__task task-page task">
+						<article class="task-page__item">
+							<h2 class="task-page__title title">
+								Задача 3.
+							</h2>
+							<p class="tasks-page__text text">
+								Дано масив імен учнів. З'ясувати скільки разів зустрічається ім'я «Іван».
+							</p>
+							<script>
+								document.write(`<h3> РІШЕННЯ: </h3> <br>`);
+								// Масив імен учнів
+								const students = ["Іван", "Марія", "Олег", "Іван", "Софія", "Іван", "Петро"];
+
+								// Лічильник для імені "Іван"
+								let countIvan = 0;
+
+								// Проходимо масив і рахуємо кількість "Іван"
+								for (let i = 0; i < students.length; i++) {
+									if (students[i] === "Іван") {
+										countIvan++;
+									}
+								}
+
+								document.write(`Ім'я "Іван" зустрічається ${countIvan} раз(и).`);
+							</script>
+						</article>
+						<br>
+						<a href="../lesson8.html" class="task-page__link">Повернутись на попередню сторінку</a>
+					</section>
+				</div>
+			</main>
+		</div>
+	</body>
+
+</html>
