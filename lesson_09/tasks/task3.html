@@ -1,0 +1,48 @@
+<!-- Задача 5. -->
+<!-- Задача 3. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Задача 3</title>
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<main class="page">
+				<div class="page__container">
+					<section class="page__task task-page task">
+						<article class="task-page__item">
+							<h2 class="task-page__title title">
+								Задача 3.
+							</h2>
+							<p class="tasks-page__text text">
+								Користувач вводить кількість елементів. Створити масив, у якому перші 5 елементів заповнені
+								1-цями, а інші до кінця масиву заповнені 7-ками.
+							</p>
+							<script>
+								const n = +prompt("Введіть кількість елементів масиву:", "9");
+
+								function createFirstFiveOnes(n) {
+									const arr = [];
+									for (let i = 0; i < n; i++) {
+										arr[i] = i < 5 ? 1 : 7; // перші 5 — 1, далі — 7
+									}
+									return arr;
+								}
+
+								document.write("<b>Array: </b>[ " + createFirstFiveOnes(n).join(", ") + " ] <br>");
+							</script>
+						</article>
+						<br>
+						<a href="../lesson9.html" class="task-page__link">Повернутись на попередню сторінку</a>
+					</section>
+				</div>
+			</main>
+		</div>
+	</body>
+
+</html>

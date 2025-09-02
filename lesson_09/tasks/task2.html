@@ -1,0 +1,49 @@
+<!-- Задача 5. -->
+<!-- Задача 3. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Задача 2</title>
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<main class="page">
+				<div class="page__container">
+					<section class="page__task task-page task">
+						<article class="task-page__item">
+							<h2 class="task-page__title title">
+								Задача 2.
+							</h2>
+							<p class="tasks-page__text text">
+								Користувач вводить кількість елементів. Створити масив, у якому перша половина заповнена 1-цями,
+								а друга заповнена 7-ками.
+							</p>
+							<script>
+								document.write(`<h3> РІШЕННЯ: </h3> <br>`);
+								const n = +prompt("Введіть кількість елементів масиву:", "15");
+
+								function createHalfOneHalfSeven(n) {
+									const arr = [];
+									for (let i = 0; i < n; i++) {
+										arr[i] = i < n / 2 ? 1 : 7; // перша половина = 1, друга = 7
+									}
+									return arr;
+								}
+
+								document.write("<b>Array</b> " + createHalfOneHalfSeven(n).join(", ") + "<br>");
+							</script>
+						</article>
+						<br>
+						<a href="../lesson9.html" class="task-page__link">Повернутись на попередню сторінку</a>
+					</section>
+				</div>
+			</main>
+		</div>
+	</body>
+
+</html>

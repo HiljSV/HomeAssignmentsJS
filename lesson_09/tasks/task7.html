@@ -1,0 +1,122 @@
+<!-- Задача 1.  -->
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Задача 7</title>
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<main class="page">
+				<div class="page__container">
+					<section class="page__task task-page task">
+						<article class="task-page__item">
+							<h2 class="task-page__title title">
+								Задача 7.
+							</h2>
+							<p class="tasks-page__text text">
+								Дано масив цін. Змінити цей масив так, що на ціни товарів, які більші за 1000 грн. дати 30%
+								знижки.
+							</p>
+							<script>
+								// document.write(`<h3> РІШЕННЯ: </h3> <br>`);
+
+								// const nRandom = +prompt("Введіть кількість елементів для випадкового масиву:", "18");
+
+								// // валідація вводу
+								// if (!Number.isInteger(nRandom) || nRandom <= 0) {
+								// 	document.write("<b> Помилка</b> невірна кількість елементів масиву! <br>");
+								// } else {
+								// 	// створюємо масив довжиною nRandom з випадковими цінами 0..10000000 (з 2 знаками після коми)
+								// 	const randomArr = new Array(nRandom);
+
+								// 	for (let i = 0; i < nRandom; i++) {
+								// 		randomArr[i] = (Math.random() * 2200).toFixed(2);
+								// 	}
+
+								// 	// Знижка 30% на ціни
+								// 	function applyDiscount(prices) {
+								// 		const arr = new Array(prices.length);
+								// 		for (let i = 0; i < prices.length; i++) {
+								// 			arr[i] = prices[i] > 1000 ? (prices[i] * 0.7).toFixed(2) : (+prices[i]).toFixed(2);
+								// 		}
+								// 		return arr;
+								// 	}
+
+								// 	// перетворюємо в строки
+								// 	let strArr = "";
+								// 	for (let i = 0; i < randomArr.length; i++) {
+								// 		strArr += randomArr[i] + (i < randomArr.length - 1 ? ", " : "");
+								// 	}
+
+								// 	const discountArr = applyDiscount(randomArr);
+
+								// 	let strDiscount = "";
+								// 	for (let i = 0; i < discountArr.length; i++) {
+								// 		strDiscount += discountArr[i] + (i < discountArr.length - 1 ? ", " : "");
+								// 	}
+
+								// 	// вивід
+								// 	document.write("<b>Масив цін товарів:</b> <br>" + strArr + "<br><br>");
+								// 	document.write("<b>Масив цін товарів з застосованою знижкою 30% ціна на які була більше 1000 грн.:</b> <br> " + strDiscount + "<br>");
+								// }
+
+								// ==================================================
+
+								document.write(`<h3> РІШЕННЯ: </h3> <br>`);
+
+								const nRandom = +prompt("Введіть кількість елементів для випадкового масиву:", "18");
+
+								// валідація вводу
+								if (!Number.isInteger(nRandom) || nRandom <= 0) {
+									document.write("<b> Помилка</b> невірна кількість елементів масиву! <br>");
+								} else {
+									// створюємо масив довжиною nRandom з випадковими цінами 0..2200 (з 2 знаками після коми)
+									const randomArr = new Array(nRandom);
+									for (let i = 0; i < nRandom; i++) {
+										randomArr[i] = parseFloat((Math.random() * 2200).toFixed(2));
+									}
+
+									// функція для застосування знижки 30%
+									function applyDiscount(prices) {
+										const arr = new Array(prices.length);
+										for (let i = 0; i < prices.length; i++) {
+											if (prices[i] > 1000) {
+												arr[i] = (prices[i] * 0.7).toFixed(2);
+											} else {
+												arr[i] = prices[i].toFixed(2);
+											}
+										}
+										return arr;
+									}
+
+									const discountArr = applyDiscount(randomArr);
+
+									// Вивід у таблиці
+									document.write("<table border='1' cellspacing='0' cellpadding='5'>");
+									document.write("<tr><th>№</th><th>Ціна до знижки (грн)</th><th>Ціна після знижки (грн)</th></tr>");
+
+									for (let i = 0; i < randomArr.length; i++) {
+										document.write("<tr>");
+										document.write("<td>" + (i + 1) + "</td>");
+										document.write("<td>" + randomArr[i].toFixed(2) + "</td>");
+										document.write("<td>" + discountArr[i] + "</td>");
+										document.write("</tr>");
+									}
+
+									document.write("</table>");
+								}
+							</script>
+						</article>
+						<br>
+						<a href="../lesson9.html" class="task-page__link">Повернутись на попередню сторінку</a>
+					</section>
+				</div>
+			</main>
+		</div>
+	</body>
+
+</html>

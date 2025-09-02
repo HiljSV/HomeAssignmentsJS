@@ -1,0 +1,64 @@
+<!-- Задача 7. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Задача 6</title>
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<main class="page">
+				<div class="page__container">
+					<section class="page__task task-page task">
+						<article class="task-page__item">
+							<h2 class="task-page__title title">
+								Задача 6.
+							</h2>
+							<p class="tasks-page__text text">
+								Дано масив елементів. Усі елементи, які більші за перший елемент помножити на 2
+							</p>
+							<script>
+								document.write(`<h3> РІШЕННЯ: </h3> <br>`);
+
+								const nRandom = +prompt("Введіть кількість елементів для випадкового масиву:", "18");
+
+								// валідація вводу
+								if (!Number.isInteger(nRandom) || nRandom <= 0) {
+									document.write("<b> Помилка</b> невірна кількість елементів <br>");
+								} else {
+									// створюємо масив довжиною nRandom з випадковими цілими 0..10
+									const randomArr = [];
+									for (let i = 0; i < nRandom; i++) {
+										randomArr.push(Math.floor(Math.random() * 10));
+									}
+
+									function multiplyGreaterThanFirst(arr) {
+										const first = arr[0]; // перший елемент
+
+										for (let i = 0; i < arr.length; i++) {
+											if (arr[i] > first) {
+												arr[i] = arr[i] * 2; // одразу переписуємо елемент
+											}
+										}
+
+										return arr; // повертаємо вже змінений масив
+									}
+
+									document.write("<b>Масив:</b> [ " + randomArr.join(", ") + " ] <br><br>");
+									document.write("Елементи масиву, які більші за перший елемент масиву помножено на 2.<br> <b>Масив:</b> [ " + multiplyGreaterThanFirst(randomArr).join(", ") + " ]<br>");
+								}
+							</script>
+						</article>
+						<br>
+						<a href="../lesson9.html" class="task-page__link">Повернутись на попередню сторінку</a>
+					</section>
+				</div>
+			</main>
+		</div>
+	</body>
+
+</html>

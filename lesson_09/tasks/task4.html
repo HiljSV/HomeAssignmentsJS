@@ -1,0 +1,60 @@
+<!-- Задача 5. -->
+<!-- Задача 3. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Задача 4</title>
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<main class="page">
+				<div class="page__container">
+					<section class="page__task task-page task">
+						<article class="task-page__item">
+							<h2 class="task-page__title title">
+								Задача 4.
+							</h2>
+							<p class="tasks-page__text text">
+								Дано масив елементів. Вивести на екран елементи, що більші за 100
+							</p>
+							<script>
+								document.write(`<h3> РІШЕННЯ: </h3> <br>`);
+
+								//  Генеруємо випадковий масив 
+								const nRandom = +prompt("Введіть кількість елементів для випадкового масиву:", "10");
+
+								const randomArr = [];
+								for (let i = 0; i < nRandom; i++) {
+									randomArr[i] = Math.floor(Math.random() * 200); // числа 0..199
+								}
+
+								//  Функція: залишає елементи > 100 у вигляді рядка 
+								function filterGreaterThan100(arr) {
+									let str = "";
+									for (let i = 0; i < arr.length; i++) {
+										if (arr[i] > 100) {
+											if (str !== "") str += ", "; // щоб між числами була кома
+											str += arr[i];
+										}
+									}
+									return str;
+								}
+
+								document.write("<b>Масив: </b>[ " + randomArr + " ]<br><br>");
+								document.write("<b>Елементи масиву > 100 : </b> [ " + filterGreaterThan100(randomArr) + " ] <br><br>");
+							</script>
+						</article>
+						<br>
+						<a href="../lesson9.html" class="task-page__link">Повернутись на попередню сторінку</a>
+					</section>
+				</div>
+			</main>
+		</div>
+	</body>
+
+</html>

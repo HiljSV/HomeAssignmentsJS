@@ -1,0 +1,64 @@
+<!-- Задача 7. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Задача 5</title>
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<main class="page">
+				<div class="page__container">
+					<section class="page__task task-page task">
+						<article class="task-page__item">
+							<h2 class="task-page__title title">
+								Задача 5.
+							</h2>
+							<p class="tasks-page__text text">
+								Дано масив елементів. Знайти добуток додатних елементів
+							</p>
+
+							<script>
+								document.write(`<h3> РІШЕННЯ: </h3> <br>`);
+
+								const nRandom = +prompt("Введіть кількість елементів для випадкового масиву:", "10");
+
+								// валідація вводу
+								if (!Number.isInteger(nRandom) || nRandom <= 0) {
+									document.write("<b>Помилка:</b> невірна кількість елементів<br>");
+								} else {
+									// створюємо масив довжиною nRandom з випадковими цілими 0..5
+									const randomArr = [];
+									for (let i = 0; i < nRandom; i++) {
+										randomArr.push(Math.floor(Math.random() * 5));
+									}
+
+									// функція повертає добуток додатних елементів;
+									// якщо додатних елементів немає — повертаємо 0 (зручно в задачах)
+									const productOfPositive = (arr) => {
+										const positives = arr.filter(x => x > 0);
+										if (positives.length === 0) return 0;
+										return positives.reduce((mult, val) => mult * val, 1);
+									};
+
+									const product = productOfPositive(randomArr);
+
+									document.write("<b>Масив:</b> [ " + randomArr.join(", ") + " ] <br><br>");
+									document.write("<b>Добуток додатних елементів:</b> " + product.toLocaleString("uk-UA") + "<br><br>");
+									document.write("<b>Добуток додатних елементів:</b> " + product + "<br>");
+								}
+							</script>
+						</article>
+						<br>
+						<a href="../lesson9.html" class="task-page__link">Повернутись на попередню сторінку</a>
+					</section>
+				</div>
+			</main>
+		</div>
+	</body>
+
+</html>
